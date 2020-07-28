@@ -19,11 +19,7 @@ test {
 }
 
 bootRun.environment([
-        "WELCOME_MESSAGE": "hello",
-        "PORT": "",
-        "MEMORY_LIMIT": "",
-        "CF_INSTANCE_INDEX": "",
-        "CF_INSTANCE_ADDR": ""
+        "WELCOME_MESSAGE": "Hello from test"
 ])
 
 test.environment([
