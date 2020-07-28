@@ -19,7 +19,7 @@ test {
 }
 
 bootRun.environment([
-        "WELCOME_MESSAGE": "Hello from test"
+        "WELCOME_MESSAGE": "Hello from the review environment"
 ])
 
 test.environment([
