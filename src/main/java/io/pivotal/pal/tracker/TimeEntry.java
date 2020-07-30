@@ -1,6 +1,7 @@
 package io.pivotal.pal.tracker;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class TimeEntry {
 
@@ -47,6 +48,16 @@ public class TimeEntry {
 
     public LocalDate getDate(){
         return date;
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(id, projectId, userId, date, hours);
+    }
+
+    @Override
+    public String toString(){
+        return "TimeEntry{" + "id=" + id +", projectId=" + projectId + ", userId=" + userId + ", date=" + date + ", hours=" + hours +"}";
     }
 
 

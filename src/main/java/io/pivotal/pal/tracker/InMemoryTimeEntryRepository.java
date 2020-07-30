@@ -8,11 +8,11 @@ import java.util.Map;
 public class InMemoryTimeEntryRepository extends TimeEntryRepository {
 
     private Map<Long, TimeEntry> entries = new HashMap<>();
-    private long nextIndex = 0;
+    private long nextIndex = 1L;
 
     @Override
     public TimeEntry create(TimeEntry timeEntry){
-        nextIndex++;
+        long id = nextIndex + 1;
 
         TimeEntry timeEntry1 = new TimeEntry(nextIndex, timeEntry.getProjectId(),
                 timeEntry.getUserId(),
